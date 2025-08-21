@@ -1,7 +1,11 @@
 {
-    "recommendations": [
-        "formulahendry.code-runner",
-        "leojhonsong.python-extension-pack",
-        "donjayamanne.python-extension-pack"
-    ]
+  "recommendations": [
+    "formulahendry.code-runner",
+    "leojhonsong.python-extension-pack",
+    "donjayamanne.python-extension-pack",
+    "mikestead.dotenv",
+    "ms-vscode.live-server",
+    "angular.ng-template",
+    "ms-edgedevtools.vscode-edge-devtools"
+  ]
 }

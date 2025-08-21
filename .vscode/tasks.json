@@ -1,0 +1,91 @@
+{
+  "version": "2.0.0",
+  "tasks": [
+    {
+      "label": "Run Django Server",
+      "type": "shell",
+      "command": "python manage.py runserver",
+      "problemMatcher": [],
+      "group": {
+        "kind": "test",
+        "isDefault": true
+      },
+      "presentation": {
+        "reveal": "always",
+        "panel": "new"
+      }
+    },
+    {
+      "label": "Make Migrations",
+      "type": "shell",
+      "command": "python manage.py makemigrations",
+      "problemMatcher": []
+    },
+    {
+      "label": "Apply Migrations",
+      "type": "shell",
+      "command": "python manage.py migrate",
+      "problemMatcher": []
+    },
+    {
+      "label": "Create Superuser",
+      "type": "shell",
+      "command": "python manage.py createsuperuser",
+      "problemMatcher": []
+    },
+    {
+      "label": "Run Tests",
+      "type": "shell",
+      "command": "python manage.py test",
+      "problemMatcher": []
+    },
+    {
+      "label": "Django Shell",
+      "type": "shell",
+      "command": "python manage.py shell",
+      "problemMatcher": []
+    },
+    {
+      "label": "Check Django Errors",
+      "type": "shell",
+      "command": "python manage.py check",
+      "problemMatcher": []
+    },
+    {
+      "type": "npm",
+      "script": "start",
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "typescript",
+        "pattern": "$tsc",
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": {
+            "regexp": "(.*?)"
+          },
+          "endsPattern": {
+            "regexp": "bundle generation complete"
+          }
+        }
+      }
+    },
+    {
+      "type": "npm",
+      "script": "test",
+      "isBackground": true,
+      "problemMatcher": {
+        "owner": "typescript",
+        "pattern": "$tsc",
+        "background": {
+          "activeOnStart": true,
+          "beginsPattern": {
+            "regexp": "(.*?)"
+          },
+          "endsPattern": {
+            "regexp": "bundle generation complete"
+          }
+        }
+      }
+    }
+  ]
+}

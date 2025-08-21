@@ -1,0 +1,39 @@
+<div class="d-center">
+  <div class="container">
+    <div class="header">
+      <h1>Minhas Tarefas</h1>
+      <p>Adicione e gerencie suas tarefas diárias</p>
+    </div>
+
+    <div class="input-container">
+      <input
+        type="text"
+        id="taskInput"
+        placeholder="Digite uma nova tarefa..."
+        [(ngModel)]="newTaskText"
+        (keypress)="onKeyPress($event)">
+      <button id="addTaskBtn" (click)="addTask()">Adicionar</button>
+    </div>
+
+    <ul id="taskList">
+      <div class="empty-state" *ngIf="tasks.length === 0">
+        <div>📋</div>
+        <h3>Nenhuma tarefa cadastrada</h3>
+        <p>Adicione uma nova tarefa para começar</p>
+      </div>
+
+      <li
+        *ngFor="let task of tasks"
+        class="task-item"
+        [class.completed]="task.completed">
+        <input
+          type="checkbox"
+          class="task-checkbox"
+          [checked]="task.completed"
+          (change)="toggleTaskCompletion(task)">
+        <span class="task-text">{{ task.text }}</span>
+        <button class="delete-btn" (click)="deleteTask(task.id)">✕</button>
+      </li>
+    </ul>
+  </div>
+</div>

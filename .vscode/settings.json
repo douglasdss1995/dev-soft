@@ -1,0 +1,18 @@
+{
+  "python.pythonPath": "todo_api/.venv/Scripts/python",
+  "python.linting.enabled": true,
+  "python.linting.pylintEnabled": true,
+  "python.linting.pycodestyleEnabled": true,
+  "python.formatting.provider": "autopep8",
+  "python.formatting.blackArgs": ["--line-length", "88"],
+  "python.testing.pytestEnabled": false,
+  "python.testing.unittestEnabled": true,
+  "files.autoSave": "afterDelay",
+  "editor.formatOnSave": true,
+  "[python]": {
+    "editor.defaultFormatter": "ms-python.autopep8",
+    "editor.codeActionsOnSave": {
+      "source.organizeImports": "always"
+    }
+  }
+}
