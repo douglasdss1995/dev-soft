@@ -1,0 +1,10 @@
+Letras com acentos que não existem no Windows-1252:
+
+ē (vogais alongadas)
+ĕ (vogais com breve)
+ë (trema/umlaut)
+õ (til)
+Ç (cedilha maiúscula e minúscula)
+Ñ (tilde espanhol)
+Ø (o cortado)
+Å (a com círculo)
