@@ -11,6 +11,8 @@ class GrupoViewSet(viewsets.ModelViewSet):
 class TarefaViewSet(viewsets.ModelViewSet):
     queryset = models.Tarefa.objects.all()
     serializer_class = TarefaSerializer
+    ordering_fields = '__all__'
+    ordering = ['concluida', '-id']
 
 
 class EtiquetaViewSet(viewsets.ModelViewSet):

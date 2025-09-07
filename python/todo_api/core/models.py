@@ -39,7 +39,7 @@ class Etiqueta(ModeloBase):
 
 
 class Tarefa(ModeloBase):
-    nome = models.CharField(max_length=255)
+    nome = models.TextField(blank=False, null=False)
     descricao = models.TextField(blank=True, null=True)
     concluida = models.BooleanField(default=False)
     grupo = models.ForeignKey(
@@ -49,7 +49,7 @@ class Tarefa(ModeloBase):
         blank=True,
         null=True
     )
-    ordem = models.SmallIntegerField(default=0)
+    ordem = models.SmallIntegerField(default=0, null=True)
     data_vencimento = models.DateField(blank=True, null=True)
     etiquetas = models.ManyToManyField(Etiqueta, related_name='tarefas')
 
