@@ -1,0 +1,50 @@
+<div class="container">
+  <div class="header">
+    <h1 (click)="search()">Minhas Tarefas</h1>
+    <p>Adicione e gerencie suas tarefas diárias</p>
+  </div>
+
+  <div class="input-container d-flex flex-column">
+    <div class="d-flex gap-2">
+      <input type="text" id="taskInput" placeholder="Digite uma nova tarefa..."
+             (keydown.enter)="saveTask()"
+             [(ngModel)]="taskName"/>
+      <button id="addTaskBtn" type="submit" (click)="saveTask()">Adicionar</button>
+    </div>
+
+    @if (error) {
+      <span class="error-message">{{ error }}</span>
+    }
+  </div>
+
+  @if (tasks.length === 0) {
+    <div class="empty-state">
+      <h3>Nenhuma tarefa cadastrada</h3>
+      <p>Adicione uma nova tarefa para começar</p>
+    </div>
+
+  } @else {
+    <ul id="taskList">
+      @for (task of tasks; track task.id) {
+        <li class="item-line">
+          <input
+            type="checkbox"
+            class="task-checkbox"
+            [checked]="task.concluida"
+            (click)="toggleTask(task)"
+            [ngClass]="{ 'completed': task.concluida }"
+          />
+          <span class="task-text"
+                [class.completed]="task.concluida"
+                (click)="toggleTask(task)"
+          >{{ task.nome }}</span>
+          <div class="d-flex gap-2">
+            <i class="btn btn-edit fas fa-edit" (click)="fillEditField(task)"></i>
+            <i class="btn btn-delete fas fa-trash-alt" (click)="deleteTask(task)"></i>
+          </div>
+        </li>
+      }
+    </ul>
+  }
+
+</div>

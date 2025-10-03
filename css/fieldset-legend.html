@@ -1,0 +1,153 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+
+    <style>
+      fieldset {
+        margin: 20px 0;
+        padding: 20px;
+        border: 2px solid #ddd;
+        border-radius: 8px;
+      }
+
+      legend {
+        font-weight: bold;
+        color: #333;
+        padding: 0 10px;
+      }
+
+      .form-group {
+        margin: 10px 0;
+      }
+
+      label {
+        display: inline-block;
+        width: 120px;
+        margin-right: 10px;
+      }
+
+      input,
+      select {
+        padding: 5px;
+        border: 1px solid #ccc;
+        border-radius: 4px;
+      }
+    </style>
+  </head>
+  <body>
+    <form>
+      <!-- Grupo de Dados Pessoais -->
+      <fieldset>
+        <legend>🎯 Dados Pessoais</legend>
+
+        <div class="form-group">
+          <label for="nome">Nome:</label>
+          <input type="text" id="nome" name="nome" required />
+        </div>
+
+        <div class="form-group">
+          <label for="email">Email:</label>
+          <input type="email" id="email" name="email" required />
+        </div>
+
+        <div class="form-group">
+          <label for="telefone">Telefone:</label>
+          <input type="tel" id="telefone" name="telefone" />
+        </div>
+
+        <div class="form-group">
+          <label for="data-nasc">Data de Nascimento:</label>
+          <input type="date" id="data-nasc" name="data-nasc" />
+        </div>
+      </fieldset>
+
+      <!-- Grupo de Endereço -->
+      <fieldset>
+        <legend>🏠 Endereço</legend>
+
+        <div class="form-group">
+          <label for="cep">CEP:</label>
+          <input type="text" id="cep" name="cep" placeholder="00000-000" />
+        </div>
+
+        <div class="form-group">
+          <label for="logradouro">Logradouro:</label>
+          <input type="text" id="logradouro" name="logradouro" />
+        </div>
+
+        <div class="form-group">
+          <label for="numero">Número:</label>
+          <input type="text" id="numero" name="numero" style="width: 80px" />
+        </div>
+
+        <div class="form-group">
+          <label for="bairro">Bairro:</label>
+          <input type="text" id="bairro" name="bairro" />
+        </div>
+
+        <div class="form-group">
+          <label for="cidade">Cidade:</label>
+          <input type="text" id="cidade" name="cidade" />
+        </div>
+
+        <div class="form-group">
+          <label for="estado">Estado:</label>
+          <select id="estado" name="estado">
+            <option value="">Selecione</option>
+            <option value="SP">São Paulo</option>
+            <option value="RJ">Rio de Janeiro</option>
+            <option value="MG">Minas Gerais</option>
+            <option value="ES">Espírito Santo</option>
+          </select>
+        </div>
+      </fieldset>
+
+      <!-- Grupo de Preferências -->
+      <fieldset>
+        <legend>⚙️ Preferências</legend>
+
+        <div class="form-group">
+          <label>Newsletter:</label>
+          <input type="radio" id="news-sim" name="newsletter" value="sim" />
+          <label for="news-sim">Sim</label>
+
+          <input
+            type="radio"
+            id="news-nao"
+            name="newsletter"
+            value="nao"
+            checked
+          />
+          <label for="news-nao">Não</label>
+        </div>
+
+        <div class="form-group">
+          <label>Interesses:</label>
+          <input
+            type="checkbox"
+            id="tech"
+            name="interesses"
+            value="tecnologia"
+          />
+          <label for="tech">Tecnologia</label>
+
+          <input
+            type="checkbox"
+            id="esportes"
+            name="interesses"
+            value="esportes"
+          />
+          <label for="esportes">Esportes</label>
+
+          <input type="checkbox" id="musica" name="interesses" value="musica" />
+          <label for="musica">Música</label>
+        </div>
+      </fieldset>
+
+      <button type="submit">Cadastrar</button>
+    </form>
+  </body>
+</html>

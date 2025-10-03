@@ -1,0 +1,26 @@
+label {
+  margin-top: 1rem;
+}
+
+input {
+  margin-bottom: 1rem;
+  padding: 0.3rem;
+}
+
+.card {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.input-field {
+  flex: 1 0 10rem;
+  margin: 0.1rem;
+  display: flex;
+  flex-direction: column;
+}
+
+.button {
+  flex: 1 0 5rem;
+  padding: 0.2rem;
+  margin: 0.1rem;
+}

@@ -6,6 +6,7 @@
     "mikestead.dotenv",
     "ms-vscode.live-server",
     "angular.ng-template",
-    "ms-edgedevtools.vscode-edge-devtools"
+    "ms-edgedevtools.vscode-edge-devtools",
+    "christian-kohler.npm-intellisense"
   ]
 }

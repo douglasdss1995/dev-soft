@@ -1,0 +1,437 @@
+<!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <!-- 
+        META TAGS ESSENCIAIS PARA SEO
+        
+        Estas tags contêm informações importantes sobre a página que ajudam 
+        os mecanismos de busca a entender o conteúdo e indexá-lo corretamente.
+    -->
+    
+    <!-- Define a codificação de caracteres como UTF-8 (recomendado) -->
+    <meta charset="UTF-8">
+    
+    <!-- 
+        Viewport é crucial para design responsivo.
+        Garante que a página seja exibida corretamente em dispositivos móveis.
+    -->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- 
+        TITLE TAG (TÍTULO DA PÁGINA)
+        - Deve ter 50-60 caracteres
+        - Inclui palavra-chave principal
+        - Deve ser único e descritivo
+        - Aparece nos resultados de busca e na aba do navegador
+    -->
+    <title>Introdução ao HTML - Guia Completo para Iniciantes</title>
+    
+    <!-- 
+        META DESCRIPTION
+        - Descrição concisa da página (150-160 caracteres)
+        - Influencia o CTR (Taxa de Clique) nos resultados de busca
+        - Deve incluir a palavra-chave principal
+    -->
+    <meta name="description" content="Aprenda HTML do zero com nosso guia completo para iniciantes. Estrutura, tags, elementos e boas práticas explicadas passo a passo.">
+    
+    <!-- 
+        META KEYWORDS
+        - Menos importante hoje em dia, mas ainda pode ser considerada
+        - Use palavras-chave relevantes separadas por vírgula
+        - Não faça "keyword stuffing" (excesso de palavras-chave)
+    -->
+    <meta name="keywords" content="HTML, introdução HTML, aprender HTML, tutorial HTML, HTML para iniciantes">
+    
+    <!-- 
+        META AUTHOR
+        - Identifica o autor do conteúdo
+        - Ajuda na atribuição de propriedade de conteúdo
+    -->
+    <meta name="author" content="Seu Nome ou Empresa">
+    
+    <!-- 
+        META ROBOTS
+        - Controla como os robôs dos mecanismos de busca indexam a página
+        - index,follow: permite indexação e seguir links
+        - noindex,nofollow: impede indexação e seguir links
+    -->
+    <meta name="robots" content="index, follow">
+    
+    <!-- 
+        CANONICAL URL
+        - Resolve problemas de conteúdo duplicado
+        - Indica a URL preferida quando existem versões similares
+    -->
+    <link rel="canonical" href="https://www.seusite.com/introducao-html">
+    
+    <!-- 
+        FAVICON
+        - Ícone que aparece na aba do navegador
+        - Melhora a reconhecibilidade da marca
+        - Diferentes tamanhos para diferentes dispositivos
+    -->
+    <link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+    <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+    
+    <!-- 
+        OPEN GRAPH (PARA REDES SOCIAIS)
+        - Controla como o conteúdo aparece quando compartilhado no Facebook
+        - og:title: título para compartilhamento
+        - og:description: descrição para compartilhamento
+        - og:image: imagem que aparece no compartilhamento
+    -->
+    <meta property="og:title" content="Introdução ao HTML - Guia Completo para Iniciantes">
+    <meta property="og:description" content="Aprenda HTML do zero com nosso guia completo para iniciantes. Estrutura, tags, elementos e boas práticas explicadas passo a passo.">
+    <meta property="og:type" content="article">
+    <meta property="og:url" content="https://www.seusite.com/introducao-html">
+    <meta property="og:image" content="https://www.seusite.com/images/html-intro.jpg">
+    <meta property="og:locale" content="pt_BR">
+    
+    <!-- 
+        TWITTER CARD
+        - Controla como o conteúdo aparece quando compartilhado no Twitter
+        - summary_large_image: formato com imagem grande
+    -->
+    <meta name="twitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Introdução ao HTML - Guia Completo para Iniciantes">
+    <meta name="twitter:description" content="Aprenda HTML do zero com nosso guia completo para iniciantes.">
+    <meta name="twitter:image" content="https://www.seusite.com/images/html-intro.jpg">
+    
+    <!-- 
+        SCHEMA.ORG (DADOS ESTRUTURADOS)
+        - Ajuda os mecanismos de busca a entender melhor o conteúdo
+        - Pode gerar rich snippets nos resultados de busca
+        - JSON-LD é o formato recomendado pelo Google
+    -->
+    <script type="application/ld+json">
+    {
+      "@context": "https://schema.org",
+      "@type": "Article",
+      "headline": "Introdução ao HTML - Guia Completo para Iniciantes",
+      "description": "Aprenda HTML do zero com nosso guia completo para iniciantes. Estrutura, tags, elementos e boas práticas explicadas passo a passo.",
+      "author": {
+        "@type": "Person",
+        "name": "Seu Nome"
+      },
+      "publisher": {
+        "@type": "Organization",
+        "name": "Seu Site",
+        "logo": {
+          "@type": "ImageObject",
+          "url": "https://www.seusite.com/logo.png"
+        }
+      },
+      "datePublished": "2024-01-15",
+      "dateModified": "2024-01-15"
+    }
+    </script>
+    
+    <!-- CSS interno para exemplo -->
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            line-height: 1.6;
+            margin: 0;
+            padding: 0;
+            color: #333;
+        }
+        header {
+            background-color: #2c3e50;
+            color: white;
+            padding: 1rem;
+            text-align: center;
+        }
+        nav {
+            background-color: #34495e;
+            padding: 0.5rem;
+        }
+        nav ul {
+            list-style: none;
+            margin: 0;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+        }
+        nav li {
+            margin: 0 1rem;
+        }
+        nav a {
+            color: white;
+            text-decoration: none;
+        }
+        main {
+            max-width: 800px;
+            margin: 2rem auto;
+            padding: 0 1rem;
+        }
+        h1, h2, h3 {
+            color: #2c3e50;
+        }
+        .highlight {
+            background-color: #ecf0f1;
+            padding: 1rem;
+            border-left: 4px solid #3498db;
+            margin: 1rem 0;
+        }
+        code {
+            background-color: #f8f9fa;
+            padding: 0.2rem 0.4rem;
+            border-radius: 3px;
+            font-family: 'Courier New', monospace;
+        }
+        pre {
+            background-color: #f8f9fa;
+            padding: 1rem;
+            overflow-x: auto;
+            border-radius: 5px;
+        }
+        footer {
+            background-color: #34495e;
+            color: white;
+            text-align: center;
+            padding: 1rem;
+            margin-top: 2rem;
+        }
+    </style>
+</head>
+<body>
+    <!-- 
+        HEADER (CABEÇALHO)
+        - Contém o título principal da página (H1)
+        - H1 é crucial para SEO - deve ser único e descritivo
+        - Deve conter a palavra-chave principal
+    -->
+    <header>
+        <h1>Introdução ao HTML - Guia Completo para Iniciantes</h1>
+        <p>Aprenda os fundamentos do HTML de forma prática e eficiente</p>
+    </header>
+    
+    <!-- 
+        NAVEGAÇÃO PRINCIPAL
+        - Usando a tag <nav> para semântica
+        - Links âncora para seções da página
+        - Ajuda na navegação interna e SEO
+    -->
+    <nav>
+        <ul>
+            <li><a href="#o-que-e-html">O que é HTML</a></li>
+            <li><a href="#estrutura-basica">Estrutura Básica</a></li>
+            <li><a href="#tags-importantes">Tags Importantes</a></li>
+            <li><a href="#boas-praticas">Boas Práticas</a></li>
+        </ul>
+    </nav>
+    
+    <!-- 
+        CONTEÚDO PRINCIPAL
+        - Tag <main> indica o conteúdo principal da página
+        - Importante para acessibilidade e SEO
+    -->
+    <main>
+        <!-- 
+            BREADCRUMB (TRILHA DE NAVEGAÇÃO)
+            - Mostra ao usuário onde ele está no site
+            - Ajuda mecanismos de busca a entender a estrutura do site
+            - aria-label para acessibilidade
+        -->
+        <nav aria-label="breadcrumb">
+            <p>Você está em: <a href="/">Home</a> > <a href="/tutoriais">Tutoriais</a> > Introdução ao HTML</p>
+        </nav>
+        
+        <!-- 
+            ARTICLE (ARTIGO)
+            - Representa um conteúdo autônomo e reutilizável
+            - Adequado para tutoriais, artigos de blog, etc.
+            - Melhora a semântica do conteúdo
+        -->
+        <article>
+            <!-- 
+                H2 - SUBTÍTULO IMPORTANTE
+                - Hierarquia correta: H1 → H2 → H3...
+                - Cada H2 representa uma seção importante
+            -->
+            <h2 id="o-que-e-html">O que é HTML?</h2>
+            
+            <!-- 
+                PARÁGRAFOS COM CONTEÚDO RELEVANTE
+                - Texto original e informativo
+                - Inclui palavras-chave de forma natural
+            -->
+            <p>HTML (HyperText Markup Language) é a linguagem de marcação padrão para criar páginas web. Ele descreve a estrutura de uma página web usando marcação.</p>
+            
+            <!-- 
+                DIV DESTAQUE
+                - Usada para chamar atenção para informações importantes
+                - Pode ser estilizada com CSS
+            -->
+            <div class="highlight">
+                <p><strong>HTML não é uma linguagem de programação</strong> - é uma linguagem de marcação que define a estrutura do seu conteúdo.</p>
+            </div>
+            
+            <!-- 
+                H3 - SUBSEÇÃO
+                - Mais específico que H2
+                - Ajuda na organização do conteúdo
+            -->
+            <h3>Por que aprender HTML?</h3>
+            
+            <!-- 
+                LISTA NÃO ORDENADA
+                - Organiza informações em pontos
+                - Melhora a legibilidade do conteúdo
+            -->
+            <ul>
+                <li>É a base de todas as páginas web</li>
+                <li>Fácil de aprender para iniciantes</li>
+                <li>Essencial para desenvolvimento web</li>
+                <li>Trabalha em conjunto com CSS e JavaScript</li>
+            </ul>
+            
+            <!-- 
+                OUTRA SEÇÃO IMPORTANTE
+                - Cada seção aborda um tópico diferente
+                - Facilita a leitura e compreensão
+            -->
+            <h2 id="estrutura-basica">Estrutura Básica de um Documento HTML</h2>
+            <p>Todo documento HTML começa com uma estrutura básica:</p>
+            
+            <!-- 
+                BLOCO DE CÓDIGO
+                - <pre> mantém a formatação
+                - <code> indica que é código
+                - Útil para tutoriais técnicos
+            -->
+            <pre><code><!DOCTYPE html>
+<html lang="pt-BR">
+<head>
+    <meta charset="UTF-8">
+    <title>Título da Página</title>
+</head>
+<body>
+    <!-- Conteúdo da página -->
+</body>
+</html></code></pre>
+            
+            <h3>Elementos da Estrutura</h3>
+            
+            <!-- 
+                LISTA DE DEFINIÇÕES
+                - <dl> lista de definições
+                - <dt> termo a ser definido
+                - <dd> definição do termo
+                - Ótimo para explicações técnicas
+            -->
+            <dl>
+                <dt><code><!DOCTYPE html></code></dt>
+                <dd>Declara que este é um documento HTML5</dd>
+                
+                <dt><code><html></code></dt>
+                <dd>Elemento raiz de uma página HTML</dd>
+                
+                <dt><code><head></code></dt>
+                <dd>Contém meta informações sobre o documento</dd>
+                
+                <dt><code><body></code></dt>
+                <dd>Contém o conteúdo visível da página</dd>
+            </dl>
+            
+            <h2 id="tags-importantes">Tags HTML Importantes para Iniciantes</h2>
+            
+            <h3>Tags de Texto</h3>
+            
+            <!-- 
+                TABELA PARA ORGANIZAR INFORMAÇÕES
+                - <table> estrutura tabular
+                - <thead> cabeçalho da tabela
+                - <tbody> corpo da tabela
+                - <tr> linha da tabela
+                - <th> célula de cabeçalho
+                - <td> célula de dados
+            -->
+            <table>
+                <thead>
+                    <tr>
+                        <th>Tag</th>
+                        <th>Descrição</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    <tr>
+                        <td><code><h1> até <h6></code></td>
+                        <td>Cabeçalhos (h1 é o mais importante)</td>
+                    </tr>
+                    <tr>
+                        <td><code><p></code></td>
+                        <td>Parágrafo</td>
+                    </tr>
+                    <tr>
+                        <td><code><strong></code></td>
+                        <td>Texto em negrito (importância semântica)</td>
+                    </tr>
+                    <tr>
+                        <td><code><em></code></td>
+                        <td>Texto em itálico (ênfase)</td>
+                    </tr>
+                </tbody>
+            </table>
+            
+            <h3>Tags de Lista</h3>
+            <ul>
+                <li><code><ul></code> - Lista não ordenada</li>
+                <li><code><ol></code> - Lista ordenada</li>
+                <li><code><li></code> - Item da lista</li>
+            </ul>
+            
+            <h3>Tags de Link e Imagem</h3>
+            <p>Para criar links: <code><a href="url">Texto do link</a></code></p>
+            <p>Para inserir imagens: <code><img src="imagem.jpg" alt="Descrição"></code></p>
+            
+            <h2 id="boas-praticas">Boas Práticas de SEO em HTML</h2>
+            
+            <h3>1. Use Hierarquia de Cabeçalhos Correta</h3>
+            <p>Sempre comece com <code><h1></code> e siga a ordem (h1 → h2 → h3...)</p>
+            
+            <h3>2. Atributo ALT nas Imagens</h3>
+            <p>Sempre inclua descrições alternativas:</p>
+            <pre><code><img src="logo.png" alt="Logo da Empresa XYZ"></code></pre>
+            
+            <h3>3. Links Descritivos</h3>
+            <p>Evite "clique aqui". Use:</p>
+            <pre><code><a href="/contato">Entre em contato conosco</a></code></pre>
+            
+            <h3>4. Semântica HTML5</h3>
+            <p>Use tags semânticas como <code><header></code>, <code><nav></code>, <code><main></code>, <code><article></code>, <code><section></code>, <code><aside></code> e <code><footer></code>.</p>
+            
+            <h3>5. Validação do Código</h3>
+            <p>Verifique se seu HTML é válido usando o <a href="https://validator.w3.org/" target="_blank" rel="noopener">W3C Markup Validator</a>.</p>
+        </article>
+        
+        <!-- 
+            SEÇÃO DE PERGUNTAS FREQUENTES
+            - Conteúdo útil para usuários
+            - Ajuda a responder dúvidas comuns
+            - Pode melhorar o tempo de permanência
+        -->
+        <section>
+            <h2>Perguntas Frequentes sobre HTML</h2>
+            
+            <h3>HTML é difícil de aprender?</h3>
+            <p>Não! HTML é uma das linguagens mais fáceis de aprender. Com algumas horas de prática, você já consegue criar páginas simples.</p>
+            
+            <h3>Preciso saber HTML para criar sites?</h3>
+            <p>Sim, HTML é a base de todos os sites. Mesmo usando ferramentas visuais, entender HTML ajuda a resolver problemas e personalizar seu site.</p>
+        </section>
+    </main>
+    
+    <!-- 
+        RODAPÉ
+        - Contém informações de copyright
+        - <time> para datas (melhora semântica)
+        - datetime para formato legível por máquinas
+    -->
+    <footer>
+        <p>&copy; 2024 Seu Site. Todos os direitos reservados.</p>
+        <p>Esta página foi atualizada pela última vez em: <time datetime="2024-01-15">15 de janeiro de 2024</time></p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,30 @@
+@import 'bootstrap/dist/css/bootstrap.min.css';
+
+* {
+  box-sizing: border-box;
+  padding: 0;
+  margin: 0;
+}
+
+html {
+  //font-size: 20px;
+}
+
+body {
+  margin: 0;
+  font-family: Roboto, "Helvetica Neue", sans-serif;
+  background-color: #1e1f22;
+}
+
+mat-form-field {
+  width: 300px;
+}
+
+table {
+  background-color: white;
+
+  thead {
+    background-color: #1e1f22;
+    color: white;
+  }
+}
